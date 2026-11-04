@@ -29,7 +29,6 @@ The server listens on `PORT` (default `3000`) and exposes:
 - `GET /` – basic service info
 - `GET /health` – health status with uptime
 - `GET /health/live` – liveness probe
-- `GET /health/ready` – readiness probe
 
 To type check:
 

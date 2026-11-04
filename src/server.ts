@@ -6,7 +6,6 @@ const server = Bun.serve({
     "/": () => Response.json({ name: "gh-lab", status: "ok" }),
     "/health": () => Response.json({ status: "ok", uptime: process.uptime() }),
     "/health/live": () => new Response("OK", { status: 200 }),
-    "/health/ready": () => Response.json({ status: "ready" }),
   },
   fetch() {
     return Response.json({ error: "Not Found" }, { status: 404 });
