@@ -6,11 +6,29 @@ To install dependencies:
 bun install
 ```
 
-To run:
+To run (development, with watch mode):
 
 ```bash
-bun run index.ts
+bun run dev
 ```
+
+To build:
+
+```bash
+bun run build
+```
+
+To start the built server:
+
+```bash
+bun run start
+```
+
+The server listens on `PORT` (default `3000`) and exposes:
+
+- `GET /` – basic service info
+- `GET /health` – health status with uptime
+- `GET /health/live` – liveness probe
 
 To type check:
 
