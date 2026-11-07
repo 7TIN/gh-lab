@@ -1,0 +1,18 @@
+version: 1
+runtime: bun
+packageManager: bun
+database:
+  required: true
+  provider: neon
+commands:
+  install: bun install --frozen-lockfile
+  migrate: bun run scripts/migrate.ts
+  test: bun run scripts/test.ts
+app:
+  command: bun run dev
+  port: 3000
+env:
+  required:
+    - DATABASE_URL
+migrations:
+  dir: scripts
