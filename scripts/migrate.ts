@@ -10,7 +10,10 @@ try {
   await sql`
     alter table customers add column if not exists preview_note text
   `;
-  console.log("applied migration: customers.preview_note");
+  await sql`
+    alter table customers add column if not exists pr_three_note text
+  `;
+  console.log("applied migration: customers.preview_note, customers.pr_three_note");
 } finally {
   await sql.end();
 }
